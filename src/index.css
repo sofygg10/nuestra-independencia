@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --color-sage-50: #f4f7f4;
+  --color-sage-100: #e6eee7;
+  --color-sage-200: #cddcd0;
+  --color-sage-300: #a9c2ae;
+  --color-sage-400: #84a68c;
+  --color-sage-500: #64896d;
+  --color-sage-600: #4d6e55;
+  --color-sage-700: #3e5945;
+  --color-sage-800: #2f4535;
+  --color-sage-900: #22332a;
+  --color-sage-950: #16221b;
+
+  --color-sand-50: #fcfaf6;
+  --color-sand-100: #f6f1e7;
+  --color-sand-200: #ece3d0;
+  --color-sand-300: #ddcdab;
+
+  --color-juan: #1f7a4d;
+  --color-me: #a0529c;
+
+  --animate-fade-up: fade-up 0.35s ease-out both;
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+html,
+body {
+  background: var(--color-sand-50);
+  color: #1c2620;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-feature-settings: 'tnum' 1;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Recharts: sin borde de foco cuadrado al hacer clic */
+.recharts-wrapper *:focus {
+  outline: none;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

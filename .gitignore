@@ -1,0 +1,6 @@
+node_modules
+dist
+*.tsbuildinfo
+# datos personales sin cifrar: nunca al repositorio público
+fleur-datos-*.json
+nuestra-independencia-*.json
